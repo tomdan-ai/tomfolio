@@ -86,7 +86,7 @@ const ContactSection: React.FC = () => {
                   <h4 className="text-gray-700 dark:text-gray-300 font-medium">Social</h4>
                   <div className="flex space-x-3 mt-1">
                     <a 
-                      href="https://github.com/tomudoh" 
+                      href="https://github.com/tomdan-ai" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
