@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import AnimatedSection from '../components/AnimatedSection';
-import { Download } from 'lucide-react';
+import { Download, ExternalLink } from 'lucide-react';
+import profileImage from '../public/reme.jpg';
 
 const AboutSection: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const AboutSection: React.FC = () => {
           >
             <div className="aspect-square relative rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-800">
               <img 
-                src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src={profileImage} 
                 alt="Tom Udoh" 
                 className="w-full h-full object-cover"
               />
@@ -69,16 +70,30 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
             
-            <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={18} className="mr-2" />
-              Download CV
-            </motion.a>
+            <div className="flex flex-wrap gap-4">
+              <motion.a
+                href="/Tom's Resume.pdf"
+                download="Tom's Resume.pdf"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download size={18} className="mr-2" />
+                Download CV
+              </motion.a>
+              
+              <motion.a
+                href="https://docs.google.com/document/d/1CGP-NhJWLICClOQUlrtU9Irubx_D7Q9KXE-pDrFwswQ/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-medium rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <ExternalLink size={18} className="mr-2" />
+                View Resume
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </div>
